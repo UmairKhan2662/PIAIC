@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task 3</title>
+</head>
+
+<body>
+  <h1>Task 3</h1>
+  <p id="result"></p>
+  <script>
+    let name = "Muhammad Umair";
+    let lowerCase = name.toLowerCase();
+    let upperCase = name.toUpperCase();
+    let titleCase = toTitleCase(name);
+
+    function toTitleCase(str) {
+      return str.replace(/\w\S*/g, function (txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      });
+    }
+
+    let result = `lowercase: ${lowerCase} <br> UPPERCASE: ${upperCase} <br> TitleCase: ${titleCase}`;
+    let consoleresult = `lowercase: ${lowerCase} 
+UPPERCASE: ${upperCase} 
+TitleCase: ${titleCase}`;
+
+    document.getElementById("result").innerHTML = result;
+  </script>
+</body>
+
+</html>
