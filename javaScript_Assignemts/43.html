@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 43</title>
+  </head>
+  <body>
+    <h1>Task 43</h1>
+    <p id="result"></p>
+    <script>
+      magician = ["Ricky Jay", "Doug Henning", "Lance Burton"];
+      let result = "";
+
+      for (let i = 0; i < magician.length; i++) {
+        let makeGreat = make_great(magician[i]);
+        console.log(magician);
+        console.log(makeGreat);
+        result += `${magician}<br>`;
+        result += `${makeGreat}<br/><hr>`;
+      }
+
+      function make_great(magician) {
+        let magicianName = "Great " + show_magician(magician);
+        return magicianName;
+      }
+
+      function show_magician(magician) {
+        return magician;
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

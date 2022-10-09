@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 38</title>
+  </head>
+  <body>
+    <h1>Task 38</h1>
+    <p id="result"></p>
+    <script>
+      let places = [
+        { city: "Baku" },
+        { city: "Germany", country: "Western European" },
+        { city: "Paris", country: "France" },
+        { city: "Turkey"},
+        { city: "Islamabad"},
+      ];
+      let result = "";
+
+      function describe_city(city, country = "Pakistan") {
+        let message = `${city} is located in ${country}`;
+        result += message + "<br>";
+        console.log(message);
+      }
+
+      for (let a = 0; a < places.length; a++) {
+        describe_city(places[a].city, places[a].country);
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

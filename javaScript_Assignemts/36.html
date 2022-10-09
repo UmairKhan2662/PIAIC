@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 36</title>
+  </head>
+  <body>
+    <h1>Task 36</h1>
+    <p id="result"></p>
+    <script>
+      let shirt = [
+        {
+          size: 28,
+          message: "Nice Shirt",
+        },
+        {
+          size: 30,
+          message: "Fav Shirt",
+        },
+        {
+          size: 32,
+          message: "Super-man",
+        },
+        {
+          size: 34,
+          message: "Spiderman",
+        },
+      ];
+
+      let result = "";
+
+      function make_shirt(size, message) {
+        let result1 = "";
+        result1 = "Summary Of Shirt";
+        console.log(result1);
+        result += result1 + "<br/>";
+        result1 = `I'm going to make a t-shirt of size: ${size}`;
+        console.log(result1);
+        result += result1 + "<br/>";
+        result1 = `message: ${message}`;
+        console.log(result1);
+        result += result1 + "<br/><hr>";
+      }
+
+      for (let i = 0; i < shirt.length; i++) {
+        make_shirt(shirt[i].size, shirt[i].message);
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

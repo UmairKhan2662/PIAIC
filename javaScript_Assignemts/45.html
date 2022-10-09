@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 45</title>
+  </head>
+  <body>
+    <h1>Task 45</h1>
+    <p id="result"></p>
+    <script>
+      let result = "";
+      
+      cars = make_car(
+        "BMW",
+        "AUDI",
+        (color = "Black"),
+        (edition = "sports")
+      );
+
+      console.log(cars);
+      result += (JSON.stringify(cars) + "<br><hr>")
+
+      function make_car(manufacturer, model, ...options) {
+        result += (`Make a explain car.`);
+        car_parts = {
+          manfacturer: manufacturer,
+          model: model,
+          moreOptions: options,
+        };
+        return car_parts;
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

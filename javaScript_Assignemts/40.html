@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 40</title>
+  </head>
+  <body>
+    <h1>Task 40</h1>
+    <p id="result"></p>
+    <script>
+      let album = [
+        { artist: "Blank Space", title: "Taylor Swift", tracks: 3 },
+        { artist: "Alan Walker", title: "Faded", tracks: 5 },
+        { artist: "Ed Sheeran ", title: "Shape of you" },
+      ];
+      let result = "";
+
+      function make_album(artist, title, tracks = 0) {
+        var album_data = {
+          artist: artist,
+          title: title,
+        };
+        if (tracks) {
+          album_data["tracks"] = tracks;
+        }
+        return album_data;
+      }
+
+      for (let a = 0; a < album.length; a++) {
+        result += `Album Data<br/>`;
+        let message = make_album(
+          album[a].artist,
+          album[a].title,
+          album[a].tracks
+        );
+        console.log(message);
+        result += `Title: ${message.title}, Artist: ${message.artist} ${
+          message.tracks ? ", Tracks:" + message.tracks : ""
+        } <br><hr>`;
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

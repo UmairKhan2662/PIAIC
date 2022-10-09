@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 44</title>
+  </head>
+  <body>
+    <h1>Task 44</h1>
+    <p id="result"></p>
+    <script>
+      let result = "";
+      
+      make_sandwich("Chicken Sandwich", "Egg Sandwich", "Roast Beef Sandwich.", "Nutella Sandwich") // insert as you want
+      make_sandwich("Seafood Sandwich", "Grilled Cheese.");
+      
+
+      function make_sandwich(...sandwishesData) {
+        result += `Making a sandwich<br/>`;
+        console.log(`Making a sandwich`);
+        for (let i = 0; i < sandwishesData.length; i++) {
+          console.log(`Adding ${sandwishesData[i]} to your sandwish`);
+          result += `Adding ${sandwishesData[i]} to your sandwish <br/>`;
+        }
+        console.log("Your sandwish is ready! <br/><hr>");
+        result += "Your sandwish is ready! <br/><hr>";
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

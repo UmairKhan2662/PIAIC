@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 35</title>
+  </head>
+  <body>
+    <h1>Task 35</h1>
+    <p id="result"></p>
+    <script>
+      let animals = ["cat", "dog", "rabbit", "panda"];
+      let result = "";
+
+      for (let i = 0; i < animals.length; i++) {
+        let message = `${animals[i]} will make a great pet!`;
+        console.log(message);
+        result += message + "<br/>";
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

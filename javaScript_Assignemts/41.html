@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 41</title>
+  </head>
+  <body>
+    <h1>Task 41</h1>
+    <p id="result"></p>
+    <script>
+
+      magician = ["Ricky Jay", "Doug Henning", "Lance Burton"];
+      let result = "";
+      show_magician(magician);
+
+      function show_magician(magician) {
+        for (let i = 0; i < magician.length; i++) {
+          console.log(magician[i]);
+          result += `${magician[i]} <br/>`;
+        }
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>
