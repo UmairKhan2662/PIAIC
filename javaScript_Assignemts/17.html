@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 17</title>
+  </head>
+  <body>
+    <h1>Task 17</h1>
+    <p id="result"></p>
+    <script>
+      let TotalSeats = 2;
+      let people = ["Umair", "Kamran", "Hamza", "Taimoor", "Umair"];
+      let result = "";
+
+      for (let a = people.length - 1; a >= TotalSeats; a--) {
+        let message = `Sorry ${people[a]}, I only have seats for 2 person, better luck next time.`;
+        result += message + "<br>";
+        console.log(message);
+
+        people.pop();
+      }
+
+      for (let a = 0; a < people.length; a++) {
+        let message = `Hi ${people[a]}, you are still on the list and invited to dinner party`;
+        result += message + "<br>";
+        console.log(message);
+      }
+
+      for (let a = people.length; a > 0; a--) {
+        people.pop();
+      }
+
+      result += "Empty Array: " + people;
+
+      console.log(people);
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

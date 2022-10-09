@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 34</title>
+  </head>
+  <body>
+    <h1>Task 34</h1>
+    <p id="result"></p>
+    <script>
+      let pizza = [
+        {
+          flavor: "Pepperoni",
+          detail:
+            "A classic. Just throw a few (or a ton of) slices of pepperoni on top of the cheese, and you’ll soon have a greasy, slightly spicy and delicious pizza that you simply can’t go wrong with.",
+        },
+        {
+          flavor: "Double cheese pizza",
+          detail:
+            "This is one of the most popular pizza flavors all across the globe, preferred particularly by vegetarians that comes with a double thick layer of cheese.",
+        },
+        {
+          flavor: "Neapolitan (and Margherita) Pizza",
+          detail:
+            "Neapolitan pizza is the classic Italian pizza we all think of – the original, and the one that led to the rise of the classic New York-style.",
+        },
+        {
+          flavor: "California Style",
+          detail:
+            "California style pizza (sometimes called Gourmet) is another popular one in the US but is unique in that’s not one combination of ingredients; instead, it follows a California tradition –topping the pizza with fresh, in-season ingredients sourced locally,",
+        },
+      ];
+      let result = "";
+
+      for (let i = 0; i < pizza.length; i++) {
+        let message = "";
+        message = `I like ${pizza[i].flavor} flavored pizza.`;
+        console.log(message);
+        result += message + "<br/>";
+      }
+
+      result += "<hr>";
+
+      for (let i = 0; i < pizza.length; i++) {
+        let message = "";
+        let message2 = "I really love pizza";
+        message = `${pizza[i].flavor}: ${pizza[i].detail}`;
+        console.log(message + message2);
+        result += message + `<br> ${message2} <br/><br>`;
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 29</title>
+  </head>
+  <body>
+    <h1>Task 29</h1>
+    <p id="result"></p>
+    <script>
+      let favorite_fruits = ["pineapple", "mango", "banana"];
+      let checkFruits = ["kiwi", "Custard pineapple", "grapes", "pineapple", "mango"];
+      let result = "";
+
+      for (let i = 0; i < favorite_fruits.length; i++) {
+        let message = "";
+        for (let j = 0; j < checkFruits.length; j++) {
+          if (favorite_fruits[i] === checkFruits[j]) {
+            message = `Your Really Like ${favorite_fruits[i]}!`;
+            console.log(message);
+            result += message + "<br>";
+          }
+        }
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 18</title>
+  </head>
+  <body>
+    <h1>Task 18</h1>
+    <p id="result"></p>
+    <script>
+      let places = ["Baku", "Germany", "Paris", "Turkey", "Islamabad"];
+      let result = "";
+
+      let tempPlaces = [...places];
+      let alphabetical = "Alphabetical: " + tempPlaces.sort();
+      result += "Orignal: " + places + "<br>" + alphabetical + "<br><hr>";
+      console.log("Orignal: " + places);
+      console.log(alphabetical);
+
+      tempPlaces = [...places];
+      let antiAlphabetical =
+        "Reverse Alphabetical: " + tempPlaces.sort().reverse();
+      result += "Orignal: " + places + "<br>" + antiAlphabetical + "<br><hr>";
+      console.log("Orignal: " + places);
+      console.log(antiAlphabetical);
+
+      tempPlaces = [...places];
+      let reverseOrder = "Reverse Order: " + tempPlaces.reverse();
+      result += "Orignal: " + places + "<br>" + reverseOrder + "<br><hr>";
+      console.log("Orignal: " + places);
+      console.log(reverseOrder);
+
+      let reReverseOrder = "Re-Reverse Order: " + tempPlaces.reverse();
+      result += "Orignal: " + places + "<br>" + reReverseOrder + "<br><hr>";
+      console.log("Orignal: " + places);
+      console.log(reReverseOrder);
+
+      let orignalAlphabetical = "Orignal Alphabetical: " + places.sort();
+      result += orignalAlphabetical + "<br><hr>";
+      console.log(orignalAlphabetical);
+
+      let orignalAntiAlphabetical =
+        "Orignal Reverse Alphabetical: " + places.reverse();
+      result += orignalAntiAlphabetical + "<br><hr>";
+      console.log(orignalAntiAlphabetical);
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

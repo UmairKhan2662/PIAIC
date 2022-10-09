@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task 32</title>
+</head>
+
+<body>
+  <h1>Task 32</h1>
+  <p id="result"></p>
+  <script>
+    let current_users = ["Umair", "Arif", "Owais", "Faizan", "Masharib"];
+    let new_users = [
+      "Habib",
+      "Talha",
+      "Shahrukh",
+      "Masharib",
+      "Saad",
+      "Sami",
+    ];
+    let result = "";
+
+
+
+    for (let a = 0; a < new_users.length; a++) {
+      let message = "";
+      for (let b = 0; b < current_users.length; b++) {
+        if (new_users[a].toLowerCase() === current_users[b].toLowerCase()) {
+          message = `${new_users[a]} is not Availble`;
+          break;
+        } else {
+          message = `${new_users[a]} is Availble to use`;
+        }
+      }
+      console.log(message);
+      result += message + "<hr>";
+    }
+
+    document.getElementById("result").innerHTML = result;
+  </script>
+</body>
+
+</html>

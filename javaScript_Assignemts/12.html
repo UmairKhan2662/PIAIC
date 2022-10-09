@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 12</title>
+  </head>
+  <body>
+    <h1>Task 12</h1>
+    <p id="result"></p>
+    <script>
+      let names = ["Umair", "Arif", "Owais", "Faizan", "Masharib"];
+      let result = "";
+
+      for (let a = 0; a < names.length; a++) {
+        let message = `Hi ${names[a]}, how are you?`;
+        result += message + "<br>";
+        console.log(message);
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

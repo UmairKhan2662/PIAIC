@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 10</title>
+  </head>
+  <body>
+    <h1>Task 10</h1>
+    <p id="result1"></p>
+    <p id="result"></p>
+
+    <script>
+      // Quote Task
+      let famous_person = "Herman Melville";
+      let quote = `"It is better to fail in originality than to succeed in imitation."`;
+      // Combine into one var for ease of print
+      let message1 = famous_person + " once said, " + quote;
+
+      document.getElementById("result1").innerHTML = message1;
+      // console.log(message1);
+
+      // Operations Task
+      let Addition = 4 + 4;
+      let Subtraction = 15 - 7;
+      let Multiplication = 4 * 2;
+      let Division = 56 / 7;
+
+      // Message For HTML
+      let message = `Addition: ${Addition}<br>Subtraction: ${Subtraction}<br> Multiplication: ${Multiplication}<br> Division: ${Division} `;
+
+      document.getElementById("result").innerHTML = message;
+
+      // Functoin For Table Generation
+      function tabled(Addition, Subtraction, Multiplication, Division) {
+        this.Addition = Addition;
+        this.Subtraction = Subtraction;
+        this.Multiplication = Multiplication;
+        this.Division = Division;
+      }
+
+      // Message For Console
+      const message2 = new tabled(
+        Addition,
+        Subtraction,
+        Multiplication,
+        Division
+      );
+
+      console.table(message2);
+    </script>
+  </body>
+</html>

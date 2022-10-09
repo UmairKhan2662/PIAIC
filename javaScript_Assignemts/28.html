@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 28</title>
+  </head>
+  <body>
+    <h1>Task 28</h1>
+    <p id="result"></p>
+    <script>
+      let age = 26;
+      let result = "";
+
+      if (age < 2) {
+        result = `Person is a baby!`;
+      } else if (age < 4) {
+        result = `Person is a toddler!`;
+      } else if (age < 13) {
+        result = `Person is a kid!`;
+      } else if (age < 20) {
+        result = `Person is a teenager!`;
+      } else if (age < 65) {
+        result = `Person is an adult!`;
+      } else {
+        result = `Person is an elder`;
+      }
+
+      console.log(result);
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 13</title>
+  </head>
+  <body>
+    <h1>Task 13</h1>
+    <p id="result"></p>
+    <script>
+      let vehicle = [
+        {
+          type: "motorcycle",
+          company: "Honda",
+        },
+        {
+          type: "car",
+          company: "Audi",
+        },
+        {
+          type: "motorcycle",
+          company: "Honda",
+        },
+        {
+          type: "motorcycle",
+          company: "Super Star",
+        },
+        {
+          type: "car",
+          company: "Toyota",
+        },
+      ];
+      let result = "";
+
+      for (let a = 0; a < vehicle.length; a++) {
+        let message = `I would like to own a ${vehicle[a].company} ${vehicle[a].type}.`;
+        result += message + "<br>";
+        console.log(message);
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

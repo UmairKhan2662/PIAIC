@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 22</title>
+  </head>
+  <body>
+    <h1>Task 22</h1>
+    <p id="result"></p>
+    <script>
+      let places = [
+      { city: "Baku", country: "Azerbaijan" },
+        { city: "Germany", country: "Western European" },
+        { city: "Paris", country: "France" },
+        { city: "Turkey", country: "Southeast Europe" },
+        { city: "Islamabad", country: "Pakistan" },
+      ];
+      let result = "";
+
+      for (let a = 0; a <= places.length; a++) {
+        let message = `${places[a].city} is located in ${places[a].country}`;
+        result += message + "<br>";
+        console.log(message);
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

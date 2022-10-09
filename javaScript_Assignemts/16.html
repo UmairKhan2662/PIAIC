@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task 16</title>
+</head>
+
+<body>
+  <h1>Task 16</h1>
+  <p id="result"></p>
+  <script>
+    let TotalSeats = 7;
+    let people = [
+      {
+        name: "Umair",
+        avalibility: "yes",
+      },
+      {
+        name: "Arif",
+        avalibility: "no",
+      },
+      {
+        name: "Faizan",
+        avalibility: "no",
+      },
+      {
+        name: "Owais",
+        avalibility: "yes",
+      },
+    ];
+
+    let morePeople = [
+      "Habib",
+      "Talha",
+      "Shahrukh",
+      "Masharib",
+      "Saad",
+      "Sami",
+    ];
+    let result = "";
+
+    let b = 0;
+
+    for (let a = 0; a < TotalSeats; a++) {
+      let replaceText = "";
+
+      if (typeof people[a] !== "undefined") {
+        if (people[a].avalibility == "no") {
+          replaceText = `${people[a].name} can't make it. Inviting ${morePeople[b]} instead.`;
+          console.log(replaceText);
+          replaceText += "<br>";
+
+          people[a].name = morePeople[b];
+          people[a].avalibility = "yes";
+          b++;
+        }
+
+        let message = `Hi ${people[a].name}, I would like to invite you to my dinner party`;
+        result += replaceText + message + "<br>";
+        console.log(message);
+      } else {
+        replaceText = `Hi ${morePeople[b]}, I have found a bigger table and would like invite you`;
+
+        let data = {
+          name: morePeople[b],
+          avalibility: "yes",
+        };
+
+        people[a] = data;
+        b++;
+
+        result += replaceText + "<br>";
+        console.log(replaceText);
+      }
+    }
+
+    document.getElementById("result").innerHTML = result;
+  </script>
+</body>
+
+</html>
